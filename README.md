@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 💸 FinanceFlow
 
-First, run the development server:
+Una aplicación de dashboard financiero moderna y responsiva, desarrollada con **React**, **Tailwind CSS** y gráficos interactivos. FinanceFlow te permite visualizar tus gastos mensuales, categorizarlos y consultar tus transacciones recientes de forma clara y atractiva.
+
+<!-- ![FinanceFlow Demo](./public/demo.png) -->
+
+---
+
+## 🚀 Tecnologías
+
+- ⚛️ [Next.js](https://nextjs.org/) — Framework de React para SSR y SSG.
+- 🧩 [React](https://reactjs.org/) — Librería principal de UI.
+- 💨 [Tailwind CSS](https://tailwindcss.com/) — Utilidades para estilos rápidos y personalizables.
+- 🎨 [shadcn/ui](https://ui.shadcn.com/) — Colección de componentes accesibles y personalizables.
+- 📊 [Chart.js](https://www.chartjs.org/) — Librería para gráficos y visualización de datos.
+- 🧠 [React Icons](https://react-icons.github.io/react-icons/) — Colección de iconos SVG integrables en React.
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+
+src/
+│
+├── components/
+│   ├── ui/                   # Elementos reutilizables como botones, tarjetas, etc.
+│   ├── chart.tsx             # Gráfico de gastos mensuales
+│   ├── chart-pie-donuts.tsx  # Gráfico de categorías de gastos
+│   └── summary-cards.tsx     # Panel principal con estadísticas
+│
+├── App.tsx                   # Enrutador o vista principal
+└── main.tsx                  # Punto de entrada
+
+````
+
+---
+
+## ⚙️ Instalación y uso local
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/financeflow.git
+cd financeflow
+````
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Inicia el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación estará disponible en `http://localhost:5173`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ☁️ Despliegue en Vercel
 
-## Learn More
+1. Crea una cuenta en [vercel.com](https://vercel.com)
+2. Importa este repositorio desde GitHub
+3. Vercel detectará automáticamente el entorno Vite y lo desplegará
+4. ¡Listo! Obtendrás una URL pública como: `https://financeflow.vercel.app`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Funcionalidades principales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* 🧾 Visualización de gastos mensuales con gráficos
+* 🧮 Indicadores de presupuesto total y porcentaje gastado
+* 🧱 Agrupación por categorías de gasto con colores personalizados
+* 🗂️ Lista de transacciones recientes con íconos por categoría
+* 🌙 Tema adaptable mediante variables de color (modo claro/oscuro/custom)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📷 Capturas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> (Incluye imágenes aquí si lo deseas. Puedes usar `public/demo.png` o añadir un gif)
+
+---
+
+## 📌 Por hacer / próximas funcionalidades
+
+* [ ] Filtro por rango de fechas
+* [ ] Soporte para ingresos
+* [ ] Exportar a CSV/Excel
+* [ ] Guardado en base de datos (Firebase / Supabase / PostgreSQL)
+
+---
+
+## 📄 Licencia
+
+MIT © \[Tu Nombre o Usuario]
+
+---
+
+
