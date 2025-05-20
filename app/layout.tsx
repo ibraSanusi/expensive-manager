@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
 import "./globals.css";
 import Header from "@/components/header";
 
@@ -30,7 +29,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} antialiased p-8`}
       lang="en"
     >
-      <body>
+      <body className="flex flex-col gap-16">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -38,9 +37,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header>
-            <ModeToggle />
-          </Header>
+          <Header />
           {children}
         </ThemeProvider>
       </body>
