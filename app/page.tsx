@@ -1,14 +1,10 @@
-import MainLayout from "@/components/MainLayout";
-// import ChartByCategory from "@/components/ChartByCategory";
-import SummaryCards from "@/components/SummaryCards";
-// import TransactionTable from "@/components/TransactionTable";
+import MainLayout from "@/components/mainLayout";
+import SummaryCards from "@/components/summaryCards";
 
 export default function Home() {
   return (
     <MainLayout>
       <SummaryCards />
-      {/* <ChartByCategory />
-      <TransactionTable /> */}
     </MainLayout>
   );
 }
