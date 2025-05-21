@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MonthlyExpenses } from "./summary/MonthlyExpenses";
 import { TotalExpenses } from "./summary/TotalExpenses";
 import { CategoryExpenses } from "./summary/CategoryExpenses";
@@ -10,10 +10,10 @@ function SummaryCards() {
     <Card>
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle className="text-2xl font-bold">Gastos</CardTitle>
-        <Avatar>
+        {/* <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+        </Avatar> */}
       </CardHeader>
       <CardContent className="grid grid-rows-2 gap-6">
         <div className="grid grid-cols-2 gap-6">
