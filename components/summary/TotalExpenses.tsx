@@ -14,7 +14,7 @@ export function TotalExpenses() {
   return (
     <Card className="flex flex-col justify-between">
       <CardHeader className="flex flex-col gap-3">
-        <CardTitle className="font-bold text-muted-foreground">
+        <CardTitle className="text-muted-foreground font-bold">
           Gastos Totales
         </CardTitle>
         <span className="text-5xl font-bold">4.568€</span>

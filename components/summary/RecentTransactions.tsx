@@ -42,14 +42,14 @@ const recentTransactions = [
 
 export function RecentTransactions() {
   return (
-    <Card className="flex flex-col border-none gap-16">
+    <Card className="flex flex-col gap-16 border-none">
       <CardHeader className="flex flex-col gap-3">
-        <CardTitle className="font-bold text-2xl text-muted-foreground">
+        <CardTitle className="text-muted-foreground text-2xl font-bold">
           Transacciones Recientes
         </CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
-        <ul className="flex flex-col justify-center gap-4 w-full h-full">
+        <ul className="flex h-full w-full flex-col justify-center gap-4">
           {recentTransactions.map((transaction) => {
             const Icon = transaction.icon;
 
@@ -60,15 +60,15 @@ export function RecentTransactions() {
                     className="size-10 rounded-full"
                     style={{ backgroundColor: transaction.fill }}
                   />
-                  <Icon className="size-6 absolute inset-0 m-auto text-white" />
+                  <Icon className="absolute inset-0 m-auto size-6 text-white" />
                 </div>
-                <div className="flex flex-col w-full">
+                <div className="flex w-full flex-col">
                   <h3>{transaction.category}</h3>
                   <span className="text-muted-foreground text-md">
                     {transaction.date}
                   </span>
                 </div>
-                <span className="text-sm font-medium text-muted-foreground">
+                <span className="text-muted-foreground text-sm font-medium">
                   -${transaction.value}
                 </span>
               </li>

@@ -6,8 +6,12 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className={clsx("w-full flex items-center justify-between p-4")}>
-      <Link href={"/"} className="text-2xl font-bold leading-none">
+    <header
+      className={clsx(
+        "flex w-full items-center justify-between bg-transparent p-4",
+      )}
+    >
+      <Link href={"/"} className="text-2xl leading-none font-bold">
         💸 FinanceFlow
       </Link>
       <div className="flex items-center space-x-4">

@@ -7,7 +7,7 @@ export function MonthlyExpenses() {
   return (
     <Card>
       <CardHeader className="flex flex-col gap-3">
-        <CardTitle className="font-bold text-muted-foreground">
+        <CardTitle className="text-muted-foreground font-bold">
           Gastos Mensuales
         </CardTitle>
         <span className="text-4xl font-bold">2.302€</span>

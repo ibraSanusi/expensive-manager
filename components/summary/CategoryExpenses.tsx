@@ -7,7 +7,7 @@ export function CategoryExpenses() {
   return (
     <Card className="flex flex-col justify-between border-none">
       <CardHeader className="flex flex-col gap-3">
-        <CardTitle className="font-bold text-2xl text-muted-foreground">
+        <CardTitle className="text-muted-foreground text-2xl font-bold">
           Categorías de Gastos
         </CardTitle>
       </CardHeader>

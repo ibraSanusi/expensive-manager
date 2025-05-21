@@ -1,4 +1,3 @@
-
 # 💸 FinanceFlow
 
 Una aplicación de dashboard financiero moderna y responsiva, desarrollada con **React**, **Tailwind CSS** y gráficos interactivos. FinanceFlow te permite visualizar tus gastos mensuales, categorizarlos y consultar tus transacciones recientes de forma clara y atractiva.
@@ -33,7 +32,7 @@ src/
 ├── App.tsx                   # Enrutador o vista principal
 └── main.tsx                  # Punto de entrada
 
-````
+```
 
 ---
 
@@ -44,7 +43,7 @@ src/
 ```bash
 git clone https://github.com/tu-usuario/financeflow.git
 cd financeflow
-````
+```
 
 2. Instala las dependencias:
 
@@ -73,11 +72,11 @@ La aplicación estará disponible en `http://localhost:5173`.
 
 ## ✨ Funcionalidades principales
 
-* 🧾 Visualización de gastos mensuales con gráficos
-* 🧮 Indicadores de presupuesto total y porcentaje gastado
-* 🧱 Agrupación por categorías de gasto con colores personalizados
-* 🗂️ Lista de transacciones recientes con íconos por categoría
-* 🌙 Tema adaptable mediante variables de color (modo claro/oscuro/custom)
+- 🧾 Visualización de gastos mensuales con gráficos
+- 🧮 Indicadores de presupuesto total y porcentaje gastado
+- 🧱 Agrupación por categorías de gasto con colores personalizados
+- 🗂️ Lista de transacciones recientes con íconos por categoría
+- 🌙 Tema adaptable mediante variables de color (modo claro/oscuro/custom)
 
 ---
 
@@ -89,10 +88,10 @@ La aplicación estará disponible en `http://localhost:5173`.
 
 ## 📌 Por hacer / próximas funcionalidades
 
-* [ ] Filtro por rango de fechas
-* [ ] Soporte para ingresos
-* [ ] Exportar a CSV/Excel
-* [ ] Guardado en base de datos (Firebase / Supabase / PostgreSQL)
+- [ ] Filtro por rango de fechas
+- [ ] Soporte para ingresos
+- [ ] Exportar a CSV/Excel
+- [ ] Guardado en base de datos (Firebase / Supabase / PostgreSQL)
 
 ---
 
@@ -101,5 +100,3 @@ La aplicación estará disponible en `http://localhost:5173`.
 MIT © \[Tu Nombre o Usuario]
 
 ---
-
-

@@ -21,7 +21,7 @@ function SummaryCards() {
           <TotalExpenses />
         </div>
 
-        <div className="grid grid-cols-2 border border-border rounded-xl">
+        <div className="border-border grid grid-cols-2 rounded-xl border">
           <CategoryExpenses />
           <RecentTransactions />
         </div>

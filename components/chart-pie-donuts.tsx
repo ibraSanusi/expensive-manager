@@ -73,8 +73,8 @@ export function ChartPieDonut() {
         </ChartContainer>
       </CardContent>
 
-      <CardFooter className="flex-col gap-2 text-sm items-start">
-        <ul className="flex flex-col gap-2 w-full">
+      <CardFooter className="flex-col items-start gap-2 text-sm">
+        <ul className="flex w-full flex-col gap-2">
           {expensesCategories.map((category) => (
             <li
               key={category.name}
@@ -85,11 +85,11 @@ export function ChartPieDonut() {
                   className="h-4 w-4 rounded-full"
                   style={{ backgroundColor: category.fill }}
                 />
-                <span className="text-sm font-medium text-muted-foreground">
+                <span className="text-muted-foreground text-sm font-medium">
                   {category.name}
                 </span>
               </div>
-              <span className="text-sm font-medium text-muted-foreground">
+              <span className="text-muted-foreground text-sm font-medium">
                 {Math.trunc(category.value * 100)}%
               </span>
             </li>
