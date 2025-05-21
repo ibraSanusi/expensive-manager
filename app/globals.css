@@ -171,4 +171,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    overflow-y: scroll;
+  }
 }
+
+body {
+   padding-top: 7rem !important;
+}
+
