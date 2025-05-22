@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MonthlyExpenses } from "./summary/MonthlyExpenses";
 import { TotalExpenses } from "./summary/TotalExpenses";
 import { CategoryExpenses } from "./summary/CategoryExpenses";
