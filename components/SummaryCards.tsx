@@ -10,10 +10,6 @@ function SummaryCards() {
     <Card>
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle className="text-2xl font-bold">Gastos</CardTitle>
-        {/* <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar> */}
       </CardHeader>
       <CardContent className="grid grid-rows-2 gap-6">
         <div className="grid grid-cols-2 gap-6">

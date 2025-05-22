@@ -9,14 +9,6 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { month: "January", gastos: 186 },
-  { month: "February", gastos: 305 },
-  { month: "March", gastos: 237 },
-  { month: "April", gastos: 73 },
-  { month: "May", gastos: 209 },
-  { month: "June", gastos: 214 },
-];
 
 const chartConfig = {
   gastos: {
@@ -25,7 +17,16 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function LinearChart() {
+type ChartDataItem = {
+  month: string;
+  gastos: number;
+};
+
+type LinearChartProps = {
+  chartData: ChartDataItem[];
+};
+
+export function LinearChart({ chartData }: LinearChartProps) {
   return (
     <Card className="w-full border-none">
       <CardContent>

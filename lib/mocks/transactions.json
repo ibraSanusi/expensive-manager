@@ -1,0 +1,114 @@
+[
+  {
+    "fecha_operacion": "2025-01-15",
+    "fecha_valor": "2025-01-15",
+    "concepto": "TRANSFERENCIA NÓMINA",
+    "importe": 1200.00,
+    "saldo": 1200.00,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-01-18",
+    "fecha_valor": "2025-01-18",
+    "concepto": "COMPRA SUPERMERCADO",
+    "importe": -150.20,
+    "saldo": 1049.80,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-02-05",
+    "fecha_valor": "2025-02-05",
+    "concepto": "COMPRA GASOLINERA",
+    "importe": -60.50,
+    "saldo": 989.30,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-02-28",
+    "fecha_valor": "2025-02-28",
+    "concepto": "TRANSFERENCIA NÓMINA",
+    "importe": 1200.00,
+    "saldo": 2189.30,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-03-10",
+    "fecha_valor": "2025-03-10",
+    "concepto": "COMPRA ZARA",
+    "importe": -87.35,
+    "saldo": 2101.95,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-03-21",
+    "fecha_valor": "2025-03-21",
+    "concepto": "RECIBO LUZ",
+    "importe": -110.00,
+    "saldo": 1991.95,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-04-01",
+    "fecha_valor": "2025-04-01",
+    "concepto": "COMPRA BIZUM AMAZON",
+    "importe": -45.99,
+    "saldo": 1945.96,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-04-15",
+    "fecha_valor": "2025-04-15",
+    "concepto": "TRANSFERENCIA NÓMINA",
+    "importe": 1200.00,
+    "saldo": 3145.96,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-04-20",
+    "fecha_valor": "2025-04-20",
+    "concepto": "RESTAURANTE",
+    "importe": -66.20,
+    "saldo": 3079.76,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-17",
+    "fecha_valor": "2025-05-17",
+    "concepto": "COMPRA BIZUM BIZUM IBERDROLA",
+    "importe": -99.01,
+    "saldo": 1115.97,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-18",
+    "fecha_valor": "2025-05-18",
+    "concepto": "COMPRA BIZUM BIZUM IBERDROLA",
+    "importe": -124.18,
+    "saldo": 1214.98,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-19",
+    "fecha_valor": "2025-05-19",
+    "concepto": "TRANSFERENCIA A FAVOR DE IES Africa",
+    "importe": 132.11,
+    "saldo": 1339.16,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-20",
+    "fecha_valor": "2025-05-20",
+    "concepto": "COMPRA Revolut**4750*",
+    "importe": 68.11,
+    "saldo": 1207.05,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-21",
+    "fecha_valor": "2025-05-21",
+    "concepto": "TRANSFERENCIA DE DEVOLUCIONES TRIBUTARIAS",
+    "importe": 138.94,
+    "saldo": 1138.94,
+    "divisa": "EUR"
+  }
+]
