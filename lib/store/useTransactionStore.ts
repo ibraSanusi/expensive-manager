@@ -8,6 +8,7 @@ export type Transaction = {
   importe: number;
   saldo: number;
   divisa: string;
+  categoria?: string;
 };
 
 type State = {

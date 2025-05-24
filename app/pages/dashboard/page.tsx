@@ -8,6 +8,7 @@ import {
 } from "@/lib/store/useTransactionStore";
 import { useEffect } from "react";
 import rawTransactions from "@/lib/mocks/transactions.json";
+import { getTransactionsWithCategories } from "@/lib/helpers/transactions";
 
 // Cuando se cargue la página, se cargan las transacciones
 // desde el archivo JSON y se añaden al store de Zustand
@@ -17,8 +18,12 @@ export default function Home() {
   const addTransactions = useTransactionStore((state) => state.addTransactions);
   const transactions = rawTransactions as Transaction[];
 
+  // Obtiene las transacciones categorizadas automáticamente
+  const transactionsWithCategories =
+    getTransactionsWithCategories(transactions);
+
   useEffect(() => {
-    addTransactions(transactions);
+    addTransactions(transactionsWithCategories);
   }, []);
 
   return (
