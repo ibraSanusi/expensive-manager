@@ -1,13 +1,15 @@
 import * as React from "react";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { RecentTransaction } from "@/lib";
+import { useTransactionStore } from "@/lib/store/useTransactionStore";
+import { formatRecentTransactions, RecentTransaction } from "@/lib";
 
-export function RecentTransactionsSrollArea({
-  recentTransactions,
-}: {
-  recentTransactions: RecentTransaction[];
-}) {
+export function RecentTransactionsSrollArea() {
+  const { transactions } = useTransactionStore();
+
+  const recentTransactions: RecentTransaction[] =
+    formatRecentTransactions(transactions);
+
   return (
     <ScrollArea className="h-96 w-full rounded-md border">
       <ul className="p-4">
