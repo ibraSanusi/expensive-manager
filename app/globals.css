@@ -77,6 +77,12 @@
   --color-shopping: oklch(0.75 0.18 340);
   --color-housing: oklch(0.85 0.17 50);
   --color-transportation: oklch(0.7 0.12 220);
+  --color-subscription: oklch(0.65 0.18 300);     
+  --color-fitness: oklch(0.7 0.22 140);          
+  --color-health: oklch(0.68 0.18 30);            
+  --color-clothing: oklch(0.75 0.15 320);         
+  --color-finance: oklch(0.7 0.2 100);            
+  --color-dining: oklch(0.8 0.16 20);            
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -115,6 +121,12 @@
   --color-shopping: oklch(0.65 0.18 340);
   --color-housing: oklch(0.75 0.17 50);
   --color-transportation: oklch(0.6 0.12 220);
+  --color-subscription: oklch(0.55 0.18 300);
+  --color-fitness: oklch(0.6 0.22 140);
+  --color-health: oklch(0.58 0.18 30);
+  --color-clothing: oklch(0.65 0.15 320);
+  --color-finance: oklch(0.6 0.2 100);
+  --color-dining: oklch(0.7 0.16 20);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -154,6 +166,12 @@
   --color-shopping: oklch(0.75 0.18 340);
   --color-housing: oklch(0.85 0.17 50);
   --color-transportation: oklch(0.7 0.12 220);
+  --color-subscription: oklch(0.7 0.18 300);
+  --color-fitness: oklch(0.75 0.22 140);
+  --color-health: oklch(0.7 0.18 30);
+  --color-clothing: oklch(0.8 0.15 320);
+  --color-finance: oklch(0.7 0.2 100);
+  --color-dining: oklch(0.85 0.16 20);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.141 0.005 285.823);
   --sidebar-primary: oklch(0.723 0.219 149.579);

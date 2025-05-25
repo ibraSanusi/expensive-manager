@@ -22,6 +22,8 @@ export default function Home() {
   const transactionsWithCategories =
     getTransactionsWithCategories(transactions);
 
+  console.log("Transacciones con categorías:", transactionsWithCategories);
+
   useEffect(() => {
     addTransactions(transactionsWithCategories);
   }, []);
