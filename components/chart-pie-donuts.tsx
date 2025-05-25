@@ -75,9 +75,9 @@ export function ChartPieDonut() {
 
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <ul className="flex w-full flex-col gap-2">
-          {expensesCategories.map((category) => (
+          {expensesCategories.map((category, index) => (
             <li
-              key={category.name}
+              key={`${category.name}-${index}`}
               className="flex items-center justify-between"
             >
               <div className="flex items-center gap-2">

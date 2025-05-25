@@ -2,7 +2,7 @@ import React from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTransactionStore } from "@/lib/store/useTransactionStore";
-import { formatRecentTransactions } from "@/lib/helpers/transactions";
+import { formatRecentTransactions } from "@/lib";
 
 // Ahora puedo crear un array de transacciones recientes
 // con los datos de las categorias y el icono segun la categoria

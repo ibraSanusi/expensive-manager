@@ -2,13 +2,10 @@
 
 import MainLayout from "@/components/mainLayout";
 import SummaryCards from "@/components/summaryCards";
-import {
-  Transaction,
-  useTransactionStore,
-} from "@/lib/store/useTransactionStore";
+import { useTransactionStore } from "@/lib/store/useTransactionStore";
 import { useEffect } from "react";
 import rawTransactions from "@/lib/mocks/transactions.json";
-import { getTransactionsWithCategories } from "@/lib/helpers/transactions";
+import { getTransactionsWithCategories, type Transaction } from "@/lib";
 
 // Cuando se cargue la página, se cargan las transacciones
 // desde el archivo JSON y se añaden al store de Zustand
@@ -21,8 +18,6 @@ export default function Home() {
   // Obtiene las transacciones categorizadas automáticamente
   const transactionsWithCategories =
     getTransactionsWithCategories(transactions);
-
-  console.log("Transacciones con categorías:", transactionsWithCategories);
 
   useEffect(() => {
     addTransactions(transactionsWithCategories);

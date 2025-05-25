@@ -1,15 +1,6 @@
 // src/store/useTransactionStore.ts
 import { create } from "zustand";
-
-export type Transaction = {
-  fecha_operacion: string;
-  fecha_valor: string;
-  concepto: string;
-  importe: number;
-  saldo: number;
-  divisa: string;
-  categoria?: string;
-};
+import { Transaction } from "../models";
 
 type State = {
   transactions: Transaction[];

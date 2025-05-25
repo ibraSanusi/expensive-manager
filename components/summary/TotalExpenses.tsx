@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Progress } from "../ui/progress";
 import { useTransactionStore } from "@/lib/store/useTransactionStore";
-import { getMonthlyExpenses } from "@/lib/helpers/transactions";
+import { getMonthlyExpenses } from "@/lib";
 
 const MONEY_TO_EXPENSE = 1200; // Presupuesto mensual
 

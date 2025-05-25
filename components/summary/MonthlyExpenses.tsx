@@ -3,10 +3,7 @@ import React from "react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTransactionStore } from "@/lib/store/useTransactionStore";
 import { LinearChart } from "../chart";
-import {
-  getAverageExpenses,
-  getExpensesByMonth,
-} from "@/lib/helpers/transactions";
+import { getAverageExpenses, getExpensesByMonth } from "@/lib";
 
 export function MonthlyExpenses() {
   const transactions = useTransactionStore((state) => state.transactions);
