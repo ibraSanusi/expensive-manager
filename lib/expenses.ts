@@ -1,6 +1,12 @@
 // expenses.ts
 import type { Transaction, MonthlyExpensesType } from "./models";
 
+/**
+ * Agrupa y calcula el total de gastos por mes a partir de una lista de transacciones.
+ *
+ * @param transactions - Array de transacciones bancarias.
+ * @returns Un array con el nombre del mes y el total de gastos correspondientes.
+ */
 export function getExpensesByMonth(
   transactions: Transaction[],
 ): MonthlyExpensesType[] {
@@ -21,6 +27,12 @@ export function getExpensesByMonth(
   }));
 }
 
+/**
+ * Calcula el promedio de gastos mensuales.
+ *
+ * @param monthlyExpenses - Array con los gastos totales por mes.
+ * @returns Promedio de gastos mensuales, como string con 2 decimales.
+ */
 export function getAverageExpenses(
   monthlyExpenses: MonthlyExpensesType[],
 ): string {
@@ -29,6 +41,12 @@ export function getAverageExpenses(
   return (total / monthlyExpenses.length).toFixed(2);
 }
 
+/**
+ * Calcula el total de gastos del mes actual.
+ *
+ * @param transactions - Array de transacciones bancarias.
+ * @returns Total de gastos del mes actual como número.
+ */
 export function getMonthlyExpenses(transactions: Transaction[]): number {
   const now = new Date();
   return transactions.reduce((acc, { fecha_valor, importe }) => {
