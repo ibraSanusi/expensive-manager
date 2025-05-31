@@ -9,48 +9,24 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-];
 
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
-    color: "hsl(var(--chart-1))",
-  },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
-  },
-} satisfies ChartConfig;
-
-const expensesCategories = [
-  { name: "Food", value: 0.32, fill: "var(--color-food)" },
-  { name: "Shopping", value: 0.28, fill: "var(--color-shopping)" },
-  { name: "Housing", value: 0.65, fill: "var(--color-housing)" },
-  { name: "Transportation", value: 0.03, fill: "var(--color-transportation)" },
-];
-
-export function ChartPieDonut() {
+export function ChartPieDonut({
+  expensesCategories,
+  chartConfig,
+  chartData,
+}: {
+  expensesCategories: {
+    name: string;
+    value: number;
+    fill: string;
+  }[];
+  chartConfig: ChartConfig;
+  chartData: {
+    category: string;
+    expenses: number;
+    fill: string;
+  }[];
+}) {
   return (
     <Card className="flex flex-col border-none">
       <CardContent className="flex-1 pb-0">
@@ -65,8 +41,8 @@ export function ChartPieDonut() {
             />
             <Pie
               data={chartData}
-              dataKey="visitors"
-              nameKey="browser"
+              dataKey="expenses"
+              nameKey="category"
               innerRadius={60}
             />
           </PieChart>

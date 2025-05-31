@@ -1,5 +1,9 @@
 // expenses.ts
-import type { Transaction, MonthlyExpensesType } from "./models";
+import type {
+  Transaction,
+  MonthlyExpensesType,
+  CategoryExpense,
+} from "./models";
 
 /**
  * Agrupa y calcula el total de gastos por mes a partir de una lista de transacciones.
@@ -47,7 +51,7 @@ export function getAverageExpenses(
  * @param transactions - Array de transacciones bancarias.
  * @returns Total de gastos del mes actual como número.
  */
-export function getMonthlyExpenses(transactions: Transaction[]): number {
+export function getCurrentMonthExpenses(transactions: Transaction[]): number {
   const now = new Date();
   return transactions.reduce((acc, { fecha_valor, importe }) => {
     const date = new Date(fecha_valor);
@@ -60,4 +64,39 @@ export function getMonthlyExpenses(transactions: Transaction[]): number {
     }
     return acc;
   }, 0);
+}
+
+/**
+ * Calcula los gastos por categoría del mes actual.
+ *
+ * @param transactions - Lista de transacciones.
+ * @returns Un array donde cada elemento representa una categoría y el total de gasto en esa categoría en el mes actual.
+ */
+export function getCurrentMonthExpensesByCategory(
+  transactions: Transaction[],
+): CategoryExpense[] {
+  const now = new Date();
+  const currentMonth = now.getMonth();
+  const currentYear = now.getFullYear();
+
+  const expensesByCategory: Record<string, number> = {};
+
+  for (const { fecha_valor, importe, categoria } of transactions) {
+    const date = new Date(fecha_valor);
+
+    const isCurrentMonth =
+      date.getMonth() === currentMonth && date.getFullYear() === currentYear;
+
+    if (isCurrentMonth && importe < 0) {
+      // console.log(`Categoría: ${categoria}, Importe: ${importe}`);
+      const category = categoria || "Otros";
+      expensesByCategory[category] =
+        (expensesByCategory[category] || 0) + Math.abs(importe);
+    }
+  }
+
+  return Object.entries(expensesByCategory).map(([category, total]) => ({
+    category,
+    total,
+  }));
 }

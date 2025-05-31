@@ -32,3 +32,8 @@ export type RecentTransaction = {
   saldo: number;
   divisa: string;
 };
+
+export type CategoryExpense = {
+  category: string;
+  total: number;
+};

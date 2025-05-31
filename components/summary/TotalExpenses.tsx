@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Progress } from "../ui/progress";
 import { useTransactionStore } from "@/lib/store/useTransactionStore";
-import { getMonthlyExpenses } from "@/lib";
+import { getCurrentMonthExpenses } from "@/lib";
 
 const MONEY_TO_EXPENSE = 1200; // Presupuesto mensual
 
@@ -20,11 +20,10 @@ const MONEY_TO_EXPENSE = 1200; // Presupuesto mensual
 export function TotalExpenses() {
   const { transactions } = useTransactionStore();
   // Recuperar los gastos totales del mes en curso
-  const totalExpenses = getMonthlyExpenses(transactions);
+  const totalExpenses = getCurrentMonthExpenses(transactions);
 
   const progressPercentage = (totalExpenses / MONEY_TO_EXPENSE) * 100;
   const progressValue = Math.trunc(Math.min(progressPercentage, 100)); // Asegurarse de que no supere el 100%
-  console.log("Total Expenses: ", progressValue);
 
   return (
     <Card className="flex flex-col justify-between">

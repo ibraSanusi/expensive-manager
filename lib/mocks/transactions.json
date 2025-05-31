@@ -72,11 +72,59 @@
     "divisa": "EUR"
   },
   {
+    "fecha_operacion": "2025-05-01",
+    "fecha_valor": "2025-05-01",
+    "concepto": "COMPRA SUPERMERCADO",
+    "importe": -82.40,
+    "saldo": 2997.36,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-04",
+    "fecha_valor": "2025-05-04",
+    "concepto": "COMPRA BIZUM MERCADONA",
+    "importe": -32.15,
+    "saldo": 2965.21,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-10",
+    "fecha_valor": "2025-05-10",
+    "concepto": "RECIBO AGUA",
+    "importe": -38.50,
+    "saldo": 2926.71,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-12",
+    "fecha_valor": "2025-05-12",
+    "concepto": "COMPRA ALIEXPRESS",
+    "importe": -21.99,
+    "saldo": 2904.72,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-15",
+    "fecha_valor": "2025-05-15",
+    "concepto": "TRANSFERENCIA NÓMINA",
+    "importe": 1200.00,
+    "saldo": 4104.72,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-16",
+    "fecha_valor": "2025-05-16",
+    "concepto": "SUSCRIPCIÓN NETFLIX",
+    "importe": -12.99,
+    "saldo": 4091.73,
+    "divisa": "EUR"
+  },
+  {
     "fecha_operacion": "2025-05-17",
     "fecha_valor": "2025-05-17",
     "concepto": "COMPRA BIZUM BIZUM IBERDROLA",
     "importe": -99.01,
-    "saldo": 1115.97,
+    "saldo": 3992.72,
     "divisa": "EUR"
   },
   {
@@ -84,7 +132,7 @@
     "fecha_valor": "2025-05-18",
     "concepto": "COMPRA BIZUM BIZUM IBERDROLA",
     "importe": -124.18,
-    "saldo": 1214.98,
+    "saldo": 3868.54,
     "divisa": "EUR"
   },
   {
@@ -92,7 +140,7 @@
     "fecha_valor": "2025-05-19",
     "concepto": "TRANSFERENCIA A FAVOR DE IES Africa",
     "importe": 132.11,
-    "saldo": 1339.16,
+    "saldo": 4000.65,
     "divisa": "EUR"
   },
   {
@@ -100,7 +148,7 @@
     "fecha_valor": "2025-05-20",
     "concepto": "COMPRA Revolut**4750*",
     "importe": 68.11,
-    "saldo": 1207.05,
+    "saldo": 3932.54,
     "divisa": "EUR"
   },
   {
@@ -108,7 +156,23 @@
     "fecha_valor": "2025-05-21",
     "concepto": "TRANSFERENCIA DE DEVOLUCIONES TRIBUTARIAS",
     "importe": 138.94,
-    "saldo": 1138.94,
+    "saldo": 4071.48,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-27",
+    "fecha_valor": "2025-05-27",
+    "concepto": "RESTAURANTE BURGER KING",
+    "importe": -23.90,
+    "saldo": 4047.58,
+    "divisa": "EUR"
+  },
+  {
+    "fecha_operacion": "2025-05-29",
+    "fecha_valor": "2025-05-29",
+    "concepto": "COMPRA FNAC",
+    "importe": -76.30,
+    "saldo": 3971.28,
     "divisa": "EUR"
   }
 ]
