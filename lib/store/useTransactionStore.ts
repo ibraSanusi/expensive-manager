@@ -6,6 +6,7 @@ type State = {
   transactions: Transaction[];
   addTransaction: (t: Transaction) => void;
   addTransactions: (t: Transaction[]) => void;
+  setTransactions: (t: Transaction[]) => void; // Set transactions directly (initial load)
   clearTransactions: () => void;
 };
 
@@ -19,5 +20,6 @@ export const useTransactionStore = create<State>((set) => ({
     set((state) => ({
       transactions: [...state.transactions, ...tArray],
     })),
+  setTransactions: (tArray) => set({ transactions: tArray }),
   clearTransactions: () => set({ transactions: [] }),
 }));

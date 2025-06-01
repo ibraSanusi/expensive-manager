@@ -1,24 +1,30 @@
 import Papa, { ParseResult } from "papaparse";
 import { getTransactionsWithCategories, type Transaction } from "@/lib";
 
-export function handleFile(file: File): Promise<Transaction[]> {
-  return new Promise((resolve, reject) => {
-    Papa.parse<Transaction>(file, {
+export const handleFile = (
+  file: File,
+  setTransactions: (t: Transaction[]) => void,
+) => {
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    const text = reader.result as string;
+
+    Papa.parse(text, {
       header: true,
       skipEmptyLines: true,
-      complete: (results: ParseResult<Transaction>) => {
-        if (results.errors.length) {
-          reject(results.errors);
-        } else {
-          resolve(results.data);
-        }
+      complete: (result) => {
+        const transactions = result.data as Transaction[];
+        setTransactions(transactions);
       },
-      error: (error) => {
-        reject(error);
+      error: (error: unknown) => {
+        console.error("CSV parse error:", error);
       },
     });
-  });
-}
+  };
+
+  reader.readAsText(file);
+};
 
 export async function parseCsv(
   csvContent: string,

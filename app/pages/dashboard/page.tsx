@@ -46,14 +46,16 @@ const csvContent = `fecha_operacion,fecha_valor,concepto,importe,saldo,divisa
 // para que estén disponibles en toda la aplicación
 // y se puedan usar en los componentes que lo necesiten.
 export default function Home() {
-  const addTransactions = useTransactionStore((state) => state.addTransactions);
-  const transactions = useTransactionStore((state) => state.transactions);
+  // const setTransactions = useTransactionStore((state) => state.setTransactions);
+  // const transactions = useTransactionStore((state) => state.transactions);
 
-  useEffect(() => {
-    parseCsv(csvContent, addTransactions);
-  }, []);
+  // useEffect(() => {
+  //   if (transactions.length === 0) {
+  //     parseCsv(csvContent, setTransactions);
+  //   }
+  // }, [transactions, setTransactions]);
 
-  console.log("Transactions loaded:", transactions);
+  // console.log("Transactions loaded:", transactions);
 
   return (
     <MainLayout>
