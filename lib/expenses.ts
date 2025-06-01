@@ -88,7 +88,6 @@ export function getCurrentMonthExpensesByCategory(
       date.getMonth() === currentMonth && date.getFullYear() === currentYear;
 
     if (isCurrentMonth && importe < 0) {
-      // console.log(`Categoría: ${categoria}, Importe: ${importe}`);
       const category = categoria || "Otros";
       expensesByCategory[category] =
         (expensesByCategory[category] || 0) + Math.abs(importe);

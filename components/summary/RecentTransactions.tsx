@@ -1,9 +1,10 @@
-import React from "react";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 import { RecentTransactionsSrollArea } from "../scroll-area-demo";
 
+/**
+ *
+ * Componente que muestra las transacciones recientes.
+ */
 export function RecentTransactions() {
   return (
     <Card className="flex flex-col gap-16 border-none">

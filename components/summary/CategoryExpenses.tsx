@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartPieDonut } from "../chart-pie-donuts";
 import { ChartConfig } from "../ui/chart";
@@ -76,6 +74,13 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
+/**
+ * Componente que muestra un gráfico de pastel con los gastos del mes actual
+ * categorizados por tipo de gasto.
+ *
+ * Utiliza el store de transacciones para obtener los datos necesarios.
+ * Muestra un gráfico de pastel con las categorías de gastos y sus respectivos totales.
+ */
 export function CategoryExpenses() {
   const { transactions } = useTransactionStore();
 
@@ -85,8 +90,6 @@ export function CategoryExpenses() {
   const formattedExpensesCategories = formatExpensesCategories(
     currentMonthExpensesByCategory,
   );
-
-  console.log("Current Month Categories: ", currentMonthExpensesByCategory);
 
   return (
     <Card className="flex flex-col justify-between border-none">
