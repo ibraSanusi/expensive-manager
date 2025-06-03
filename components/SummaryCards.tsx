@@ -23,7 +23,7 @@ function SummaryCards() {
 
         <Dialog>
           <DialogTrigger>
-            <Button className="cursor-pointer">Open</Button>
+            <Button className="cursor-pointer">Import</Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>

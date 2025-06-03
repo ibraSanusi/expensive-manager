@@ -1,15 +1,33 @@
 import React from "react";
 import { useTransactionStore } from "@/lib/store/useTransactionStore";
-import { handleFile } from "@/lib/upload";
+import { handleFile, parseXlsxFile } from "@/lib/upload";
 
 export default function FileUpload() {
   const setTransactions = useTransactionStore((state) => state.setTransactions);
   const transactions = useTransactionStore((state) => state.transactions);
 
-  const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
-      handleFile(file, setTransactions);
+    if (!file) return;
+
+    const fileName = file.name.toLowerCase();
+    const isCsv = fileName.endsWith(".csv");
+    const isXlsx = fileName.endsWith(".xlsx");
+
+    try {
+      if (isCsv) {
+        const parsed = await handleFile(file);
+        setTransactions(parsed);
+      } else if (isXlsx) {
+        const parsed = await parseXlsxFile(file);
+        setTransactions(parsed);
+      } else {
+        console.warn("Unsupported file type:", file.type);
+        alert("Unsupported file type. Please upload a .csv or .xlsx file.");
+      }
+    } catch (error) {
+      console.error("Error processing file:", error);
+      alert("Error processing file. Please check the format and try again.");
     }
   };
 
@@ -24,7 +42,6 @@ export default function FileUpload() {
         <div className="flex flex-col items-center justify-center pt-5 pb-6">
           <svg
             className="mb-4 h-8 w-8 text-gray-500 dark:text-gray-400"
-            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 20 16"
@@ -42,13 +59,13 @@ export default function FileUpload() {
             drop
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            CSV file only
+            CSV or XLSX files (bank statements, max size 5MB)
           </p>
         </div>
         <input
           id="dropzone-file"
           type="file"
-          accept=".csv"
+          accept=".csv,.xlsx"
           className="hidden"
           onChange={onFileChange}
         />
