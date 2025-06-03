@@ -1,11 +1,11 @@
 "use client";
 
-import MainLayout from "@/components/mainLayout";
-import SummaryCards from "@/components/summaryCards";
-import { useTransactionStore } from "@/lib/store/useTransactionStore";
-import { useEffect } from "react";
+import MainLayout from "@/components/MainLayout";
+import SummaryCards from "@/components/SummaryCards";
+// import { useTransactionStore } from "@/lib/store/useTransactionStore";
+// import { useEffect } from "react";
 
-import { parseCsv } from "@/lib/upload";
+// import { parseCsv } from "@/lib/upload";
 
 const csvContent = `fecha_operacion,fecha_valor,concepto,importe,saldo,divisa
 2025-01-15,2025-01-15,TRANSFERENCIA NÓMINA,1200.00,1200.00,EUR
