@@ -111,6 +111,7 @@ export const keywordMap = [
       "burger king",
       "tapas",
       "comida",
+      "sabor",
     ],
     category: "Restauración",
   },
