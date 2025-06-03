@@ -19,7 +19,7 @@ export async function parseXlsxFile(file: File): Promise<Transaction[]> {
         const firstSheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[firstSheetName];
 
-        const rows: any[][] = XLSX.utils.sheet_to_json(sheet, {
+        const rows: unknown[][] = XLSX.utils.sheet_to_json(sheet, {
           header: 1,
           blankrows: false,
         });
@@ -58,7 +58,7 @@ export async function parseXlsxFile(file: File): Promise<Transaction[]> {
   });
 }
 
-function parseDate(value: any): string {
+function parseDate(value: unknown): string {
   if (typeof value === "string") {
     const [day, month, year] = value.split("/");
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
@@ -66,7 +66,7 @@ function parseDate(value: any): string {
   return String(value);
 }
 
-function toNumber(value: any): number {
+function toNumber(value: unknown): number {
   if (typeof value === "string") {
     return parseFloat(
       value.replace(/\./g, "").replace(",", ".").replace("−", "-"),
