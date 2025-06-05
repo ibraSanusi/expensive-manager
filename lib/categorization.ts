@@ -33,7 +33,7 @@ export function matchCategory(description: string): string | undefined {
 export function guessCategory(transaction: Transaction): string | undefined {
   const description = (transaction.concepto ?? "").toLowerCase();
   const matchedCategory = matchCategory(description);
-  return matchedCategory ?? transaction.categoria;
+  return matchedCategory ?? "Otros";
 }
 
 /**
