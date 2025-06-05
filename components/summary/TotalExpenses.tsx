@@ -13,15 +13,10 @@ import { getCurrentMonthExpenses } from "@/lib";
 import { useState } from "react";
 
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-  DialogClose,
-} from "@/components/ui/dialog";
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 import { Button } from "../ui/button";
 import { Pencil } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -58,43 +53,48 @@ export function TotalExpenses() {
 
       <CardFooter className="flex items-center gap-2">
         <span className="text-4xl">{budget}€</span>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button className="cursor-pointer">
+
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button aria-label="Editar presupuesto">
               <Pencil />
             </Button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Selecciona el importe máximo</DialogTitle>
-              <DialogDescription>
-                <Input
-                  className="text-2xl"
-                  type="number"
-                  value={budgetInput}
-                  onChange={handleInputChange}
-                  placeholder="Presupuesto mensual"
-                />
-              </DialogDescription>
-            </DialogHeader>
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button onClick={() => setBudget(budgetInput)}>Guardar</Button>
-              </DialogClose>
-              <DialogClose asChild>
+          </PopoverTrigger>
+
+          <PopoverContent className="w-72 p-4">
+            <div className="flex flex-col gap-4">
+              <label htmlFor="budgetInput" className="font-semibold">
+                Selecciona el importe máximo
+              </label>
+              <Input
+                id="budgetInput"
+                type="number"
+                value={budgetInput}
+                onChange={handleInputChange}
+                placeholder="Presupuesto mensual"
+                className="text-2xl"
+              />
+              <div className="flex justify-end gap-2">
+                <Button
+                  onClick={() => setBudget(budgetInput)}
+                  className="min-w-[80px]"
+                >
+                  Guardar
+                </Button>
                 <Button
                   variant="secondary"
                   onClick={() => {
                     setBudget(DEFAULT_BUDGET);
                     setBudgetInput(DEFAULT_BUDGET);
                   }}
+                  className="min-w-[80px]"
                 >
                   Restablecer
                 </Button>
-              </DialogClose>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+              </div>
+            </div>
+          </PopoverContent>
+        </Popover>
       </CardFooter>
     </Card>
   );
