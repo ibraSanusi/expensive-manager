@@ -7,7 +7,6 @@ import FileUpload from "./FileUpload";
 
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
