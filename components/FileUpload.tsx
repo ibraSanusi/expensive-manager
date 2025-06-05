@@ -43,8 +43,8 @@ export default function FileUpload({ onUploadSuccess }: FileUploadProps) {
     } finally {
       e.target.value = "";
 
-      await delay(500);
       onUploadSuccess?.(); // Llamar al callback si se proporciona
+      await delay(500);
       toast.success("Archivo subido correctamente", {
         icon: <CheckCircle className="text-green-500" />,
         duration: 2500,
