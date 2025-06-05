@@ -4,11 +4,16 @@ import { handleFile, parseXlsxFile } from "@/lib/upload";
 
 export default function FileUpload() {
   const setTransactions = useTransactionStore((state) => state.setTransactions);
+  const clearTransactions = useTransactionStore(
+    (state) => state.clearTransactions,
+  );
   const transactions = useTransactionStore((state) => state.transactions);
 
   const onFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
+
+    clearTransactions(); // Limpiar transacciones antes de cargar un nuevo archivo
 
     const fileName = file.name.toLowerCase();
     const isCsv = fileName.endsWith(".csv");
