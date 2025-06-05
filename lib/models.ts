@@ -37,3 +37,7 @@ export type CategoryExpense = {
   category: string;
   total: number;
 };
+
+export type FileUploadProps = {
+  onUploadSuccess?: () => void;
+};

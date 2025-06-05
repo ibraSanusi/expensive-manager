@@ -7,6 +7,7 @@ import FileUpload from "./FileUpload";
 
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -14,22 +15,25 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
+import { useState } from "react";
 
 function SummaryCards() {
+  const [open, setOpen] = useState(false); // Estado de apertura
+
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle className="text-2xl font-bold">Gastos</CardTitle>
 
-        <Dialog>
-          <DialogTrigger>
-            <Button className="cursor-pointer">Import</Button>
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogTrigger asChild>
+            <Button>Import</Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Upload File</DialogTitle>
               <DialogDescription>
-                <FileUpload />
+                <FileUpload onUploadSuccess={() => setOpen(false)} />
               </DialogDescription>
             </DialogHeader>
           </DialogContent>

@@ -1,13 +1,20 @@
 import React from "react";
 import { useTransactionStore } from "@/lib/store/useTransactionStore";
 import { handleFile, parseXlsxFile } from "@/lib/upload";
+import { FileUploadProps } from "@/lib";
 
-export default function FileUpload() {
+import { toast } from "sonner";
+import { CheckCircle } from "lucide-react";
+
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+export default function FileUpload({ onUploadSuccess }: FileUploadProps) {
   const setTransactions = useTransactionStore((state) => state.setTransactions);
   const clearTransactions = useTransactionStore(
     (state) => state.clearTransactions,
   );
-  const transactions = useTransactionStore((state) => state.transactions);
 
   const onFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -33,10 +40,17 @@ export default function FileUpload() {
     } catch (error) {
       console.error("Error processing file:", error);
       alert("Error processing file. Please check the format and try again.");
+    } finally {
+      e.target.value = "";
+
+      await delay(500);
+      onUploadSuccess?.(); // Llamar al callback si se proporciona
+      toast.success("Archivo subido correctamente", {
+        icon: <CheckCircle className="text-green-500" />,
+        duration: 2500,
+      });
     }
   };
-
-  console.log("Transactions loaded after uploading file:", transactions);
 
   return (
     <form className="flex w-full items-center justify-center">
