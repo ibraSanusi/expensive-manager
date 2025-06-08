@@ -21,16 +21,19 @@ Una aplicación de dashboard financiero moderna y responsiva, desarrollada con *
 
 ```
 
-src/
-│
-├── components/
-│   ├── ui/                   # Elementos reutilizables como botones, tarjetas, etc.
-│   ├── chart.tsx             # Gráfico de gastos mensuales
-│   ├── chart-pie-donuts.tsx  # Gráfico de categorías de gastos
-│   └── summary-cards.tsx     # Panel principal con estadísticas
-│
-├── App.tsx                   # Enrutador o vista principal
-└── main.tsx                  # Punto de entrada
+app/
+├── pages/                # Entradas principales
+├── components/           # Componentes reutilizables
+│   ├── summary/          # Gráficos y tarjetas resumen
+│   ├── ui/               # Botones, toggles, scrolls
+│   ├── Header.tsx
+│   ├── FileUpload.tsx
+│   ├── chart.tsx
+│   └── ChartByCategory.tsx
+├── lib/                  # Lógica de negocio
+│   ├── expenses.ts       # Cálculos de gastos
+│   ├── categories.ts     # Gestión de categorías
+│   └── utils.ts          # Utilidades varias
 
 ```
 
