@@ -85,7 +85,8 @@ La aplicación estará disponible en `http://localhost:5173`.
 
 ## 📷 Capturas
 
-> (Incluye imágenes aquí si lo deseas. Puedes usar `public/demo.png` o añadir un gif)
+![image](https://github.com/user-attachments/assets/ec12ac15-7a46-4677-819b-bdcaad06aa43)
+
 
 ---
 
