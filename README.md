@@ -101,6 +101,6 @@ La aplicación estará disponible en `http://localhost:5173`.
 
 ## 📄 Licencia
 
-MIT © \[Tu Nombre o Usuario]
+MIT © \Ibrahim Sanusi
 
 ---
